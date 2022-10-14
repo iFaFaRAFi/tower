@@ -1,0 +1,56 @@
+###
+# Pobierz pierwszą stronę wszystkich rekordówk typu Aircraft
+GET http://localhost:8080/api/
+Accept: application/json
+
+###
+
+# Pobierz rekordy typu Aircraft zgodnie z poniższym rządaniem
+GET http://localhost:8080/api?iataCode=737
+Accept: application/json
+
+###
+
+# Pobierz rekordy typu Aircraft zgodnie z poniższym rządaniem
+GET http://localhost:8080/api?iataCode=737&engineType=JET&sort=icaoCode,DESC
+Accept: application/json
+
+###
+
+# Pobierz co najwyżej 3 rekordy typu Aircraft
+GET http://localhost:8080/api?manufacturer=Boeing&size=3
+Accept: application/json
+
+###
+# Dodaj Aircraft E170
+POST http://localhost:8080/api/
+Content-Type: application/json
+
+{
+  "iataCode": "170",
+  "icaoCode": "E170",
+  "modelName": "ERJ 170-100",
+  "manufacturer": "Embrayer",
+  "engineType": "JET",
+  "active": true
+}
+
+###
+# Aktualizuj Aircraft
+PUT http://localhost:8080/api/2
+
+Content-Type: application/json
+{
+  "iataCode": "735",
+  "icaoCode": "B734",
+  "modelName": "Boeing 737 wersja 400 middle",
+  "manufacturer": "BOEING I.C.",
+  "engineType": "JET",
+  "active": true
+}
+
+###
+# Usuń Aircraft o ID: 3
+DELETE http://localhost:8080/api/3
+Content-Type: application/json
+

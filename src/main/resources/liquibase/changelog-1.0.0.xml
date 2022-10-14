@@ -22,6 +22,7 @@
             <column name="model_name" type="varchar(255)"/>
             <column name="manufacturer" type="varchar(255)"/>
             <column name="engine_type" type="varchar(255)"/>
+            <column name="active" type="boolean" defaultValue="true"/>
         </createTable>
     </changeSet>
 
