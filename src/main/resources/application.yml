@@ -12,3 +12,6 @@ spring:
   liquibase:
     change-log: classpath:/liquibase/changelog-master.xml
 
+tower:
+  approachingCertificationDeadline: 3 //liczba dni określająca bliskość terminu ważności certyfikacji
+
