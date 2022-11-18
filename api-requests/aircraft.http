@@ -22,6 +22,12 @@ GET http://localhost:8080/api?manufacturer=Boeing&size=3
 Accept: application/json
 
 ###
+
+# Pobierz wszystkie rekordy typu Aircraft dla których zbliża się termin ważności certyfikatu (ilość dni określająca zbliżający się termin zdefiniowana jest w application.yml)
+GET http://localhost:8080/api/approachingCertificationDeadline
+Accept: application/json
+
+###
 # Dodaj Aircraft E170
 POST http://localhost:8080/api/
 Content-Type: application/json
