@@ -10,5 +10,5 @@ import java.time.LocalDateTime;
 class FlightOperationPaxDto {
     private String flightNumber;
     private LocalDateTime flightDateTime;
-    private Integer pax;
+    private Integer pax; // sum of fields: paxMales, paxFemales, paxInfants
 }
