@@ -24,3 +24,4 @@
 
 
 5. Zadanie dodatkowe: Autoryzacja za pomocą przekazanego tokenu
+
