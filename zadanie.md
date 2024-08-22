@@ -12,7 +12,7 @@
 4. Przykładowy plik z depeszami wejśćiowymi zlokalizowany jest w: messages/sample-data.txt
 
 5. Model depeszy [TST] zdefiniowany jest jak poniżej:
-
+```
 TSTMessage: {
     flightNumber: tekst;
     originAirport: tekst;
@@ -22,7 +22,7 @@ TSTMessage: {
     paxFemales: liczba całkowita;
     paxInfants: liczba całkowita;
 }
-
+```
 
 Struktura depeszy TST:
 ```
