@@ -1,6 +1,10 @@
 ## Przygotowanie szablonu oraz parsera
 
 1. Przygotować responsywny szablon HTML w oparciu o projekt znajdujący się w pliku: src/main/web/imgs/tower-site-project.jpg
+    Należy przy tym uwzględnić następujące założenia:
+    - przy szerokości ekranu przeglądarki węższej niż 600px, obrazek wieży zlokalizowany po prawej stronie powinien się nie wyświetlać.
+    - po najechaniu kursorem myszy na przycisk choose file powinien on błysnąć
+    - na ekranach gdzie szerokość jest większa niż 1200px górne menu tj. przyciski AboutUs oraz Upload powinny zostać przeniesione na prawą stronę ekranu
 
 2. Po wybraniu pliku z danymi wejściowymi (przycisk choose file), nazwa wybranego pliku pojawia się w polu input powyżej przycisków, następnie po zatwierdzeniu przyciskiem submit, należy wyświetlić w konsoli listę obiektów FlightOperationPaxDto zawierających następujące pola:     
    - flightNumber - pole o typie tekstowym;
