@@ -2,7 +2,7 @@
 
 1. Przygotować responsywny szablon HTML w oparciu o projekt znajdujący się w pliku: src/main/web/imgs/tower-site-project.jpg
 
-2. Po wybraniu pliku z danymi wejściowymi (przycisk choose file, nazwa pliku pojawia się w polu input powyżej), a następnie ich zatwierdzeniu przyciskiem submit, należy wyświetlić w konsoli listę obiektów FlightOperationPaxDto zawierających następujące pola:     
+2. Po wybraniu pliku z danymi wejściowymi (przycisk choose file), nazwa wybranego pliku pojawia się w polu input powyżej przycisków, następnie po zatwierdzeniu przyciskiem submit, należy wyświetlić w konsoli listę obiektów FlightOperationPaxDto zawierających następujące pola:     
    - flightNumber - pole o typie tekstowym;
    - flightDateTime - pole o typie przechowującym dane w postaci data wraz z czasem;
    - pax - pole o typie liczb całkowitych, jest to suma pól: paxMales, paxFemales, paxInfants;
