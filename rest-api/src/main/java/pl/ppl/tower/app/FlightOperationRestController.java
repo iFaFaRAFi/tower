@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 import static pl.ppl.tower.app.ApplicationContentType.JSON;
 import static pl.ppl.tower.app.ApplicationContentType.JSON_V1;
 
@@ -18,6 +20,13 @@ import static pl.ppl.tower.app.ApplicationContentType.JSON_V1;
 @RequiredArgsConstructor
 class FlightOperationRestController {
     private final ParserAlfaService parserAlfaService;
+
+    @GetMapping()
+    List<FlightOperationResponse> getFlightOperations() {
+        return parserAlfaService.findAll().stream()
+                .map(FlightOperationDomain::toResponse)
+                .toList();
+    }
 
     @GetMapping("/{id}")
     FlightOperationResponse getFlightOperation(@PathVariable Long id) {
