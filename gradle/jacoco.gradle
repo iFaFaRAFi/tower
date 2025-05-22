@@ -1,0 +1,13 @@
+apply plugin: 'jacoco'
+
+project.tasks.withType(Test).configureEach {
+    finalizedBy jacocoTestReport
+}
+
+project.jacocoTestReport {
+    getExecutionData().setFrom(fileTree(layout.buildDirectory).include('/jacoco/*.exec'))
+
+    reports {
+        xml.required = true
+    }
+}

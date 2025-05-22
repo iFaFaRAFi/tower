@@ -1,0 +1,37 @@
+plugins {
+    id 'org.springframework.boot'
+}
+
+group = 'pl.ppl'
+version = "${appVersion}"
+
+springBoot {
+    buildInfo()
+}
+
+jar {
+    archiveBaseName = "${appName}"
+}
+
+bootJar {
+    destinationDirectory = file("$rootDir/build/libs")
+    archiveBaseName = "${appName}"
+    manifest {
+        attributes(
+                "Implementation-Version": project.version,
+                "Project-Name": project.name)
+    }
+}
+
+dependencies {
+    implementation project(':parser-alfa')
+    implementation project(':public-api')
+    implementation project(':rest-api')
+    implementation project(':jpa-repositories')
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation "org.spockframework:spock-spring:${spockVersion}"
+    testImplementation 'org.testcontainers:junit-jupiter'
+}

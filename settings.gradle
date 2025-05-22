@@ -1,0 +1,14 @@
+pluginManagement {
+    plugins {
+        id 'org.springframework.boot' version "${springBootVersion}"
+        id 'io.spring.dependency-management' version "${bomVersion}"
+    }
+}
+
+rootProject.name = 'tower-app'
+
+include 'tower-app'
+include 'parser-alfa'
+include 'public-api'
+include 'rest-api'
+include 'jpa-repositories'

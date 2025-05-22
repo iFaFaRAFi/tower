@@ -1,0 +1,52 @@
+import static org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES
+
+plugins {
+    id 'java-library'
+    id 'groovy'
+    id 'io.spring.dependency-management'
+    id 'org.springframework.boot' apply false
+    id 'net.researchgate.release' version '2.8.1'
+}
+
+apply from: 'gradle/buildInfo.gradle'
+apply from: 'gradle/jacoco.gradle'
+
+group = 'pl.ppl'
+
+java {
+    targetCompatibility = "${javaVersion}"
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+
+    apply plugin: 'java-library'
+    apply plugin: 'groovy'
+    apply plugin: 'io.spring.dependency-management'
+
+    java {
+        targetCompatibility = "${javaVersion}"
+    }
+
+    dependencies {
+        // [Global libs]
+        implementation 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
+
+        // [Tests]
+        testImplementation "org.spockframework:spock-core:${spockVersion}"
+        testImplementation 'org.mockito:mockito-core'
+
+        test {
+            useJUnitPlatform()
+        }
+    }
+
+    dependencyManagement {
+        imports {
+            mavenBom BOM_COORDINATES
+        }
+    }
+}

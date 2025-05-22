@@ -1,8 +1,0 @@
-
-1. Przygotować CRUD dla encji Aircraft na podstawie zaproponowanego modelu
-2. Kontroler poza standardowymi endpointami takimi jak pobieranie wszystkich informacji,
-dodawanie nowych rekordów, ich aktualizacja oraz usuwanie powinien również zwrócić dodatkowo:
- - posortowane uwzględniające stronicowanie rekordy
- - Filtrowane rekordy po słowie kluczowym na każdym polu
- - Rekordy zawierające litere "a" w polach modelu
-3. Udowodnić działanie wykonanych zadań w testach (do wyboru metoda)

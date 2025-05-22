@@ -1,0 +1,25 @@
+import org.apache.tools.ant.filters.ReplaceTokens
+
+import static java.time.LocalDateTime.now
+import static java.time.format.DateTimeFormatter.ofPattern
+
+jar {
+    manifest {
+        attributes(
+                "Implementation-Title": implementationTitle,
+                "Implementation-Version": project.version,
+                "Project-Name": project.name)
+    }
+}
+
+processResources {
+    Closure replaceBuildInfo = {
+        filter ReplaceTokens, tokens: [
+                appVersion: project.version,
+                buildDate : now().format(ofPattern("yyyy-MM-dd HH:mm:ss")).toString()
+        ]
+    }
+
+    filesMatching('application.yml', replaceBuildInfo)
+    filesMatching('banner.txt', replaceBuildInfo)
+}
