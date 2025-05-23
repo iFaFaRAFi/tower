@@ -6,7 +6,7 @@
 4. Należy przygotować mechanizm, który pozwoli poprzez Rest API pobierać klientom filtrowane (należy uwzględnić filtrowanie po wszystkich polach obiektu FlightOperationResponse) i sortowane (również możliwość sortowania po wszystkic polach) informacje o operacjach lotniczych zaimportowanych z pliku sample-data.txt. 
 
 
-Struktura depeszy TST:
+## Struktura depeszy TST:
 ```
 TST
 [SEASON]
