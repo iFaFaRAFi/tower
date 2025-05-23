@@ -19,7 +19,6 @@ class FlightOperationEntity {
     private String fullFlightNumber;
     private String airlineIataCode;
     private String airportIataCode;
-    private String season;
     private Integer paxMale;
     private Integer paxFemale;
     private Integer paxInfant;
@@ -31,7 +30,6 @@ class FlightOperationEntity {
         this.fullFlightNumber = flightOperation.fullFlightNumber();
         this.airlineIataCode = flightOperation.airlineIataCode();
         this.airportIataCode = flightOperation.airportIataCode();
-        this.season = flightOperation.season();
         this.paxMale = flightOperation.paxMale();
         this.paxFemale = flightOperation.paxFemale();
         this.paxInfant = flightOperation.paxInfant();
@@ -45,7 +43,6 @@ class FlightOperationEntity {
                 fullFlightNumber,
                 airlineIataCode,
                 airportIataCode,
-                season,
                 paxMale,
                 paxFemale,
                 paxInfant,

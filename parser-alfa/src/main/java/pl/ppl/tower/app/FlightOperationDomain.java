@@ -1,7 +1,6 @@
 package pl.ppl.tower.app;
 
 import java.time.Instant;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public record FlightOperationDomain(
@@ -10,7 +9,6 @@ public record FlightOperationDomain(
         String fullFlightNumber,
         String airlineIataCode,
         String airportIataCode,
-        String season,
         Integer paxMale,
         Integer paxFemale,
         Integer paxInfant,
