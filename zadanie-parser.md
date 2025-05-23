@@ -16,4 +16,4 @@ PAX [MALES]/[FEMALES]/[INFANTS]
 
 ## Wskazówki:
 - W celu określenia kierunku operacji lotniczej (FlightOperationDirection) zwracamy uwagę na pola: [ORIGIN_AIRPORT] oraz [DESTINATION_AIRPORT]. Jeżeli [ORIGIN_AIRPORT] ma wartość 'WAW' jest to operacja odlotu (DEPARTURE), w sytuacji gdy 'WAW' pojawia się w polu [DESTINATION_AIRPORT] jest to operacja przylotu (ARRIVAL).
-- Kod IATA przewoźnika możemy określić na podstawie dwóch pierwszych znaków pola [FLIGHT_NUMBER]  
+- Kod IATA przewoźnika (airlineIataCode) określają pierwsze dwa znaki pola [FLIGHT_NUMBER]  
