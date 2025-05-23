@@ -1,4 +1,4 @@
-## Przygotowanie parsera
+# Przygotowanie parsera
 
 1. Uruchamiając aplikację, w module Parser-Alfa zostanie wywołana metoda ParserAlfaService.runAfterStart(), która to powinna rozpocząć proces importu operacji lotniczych z pliku tekstowego "messages/sample-data.txt".
 2. Zlokalizowane w powyższym pliku depesze oznaczone desygnatorem [TST], należy przetworzyć na operacje lotnicze (obiekty typu FlightOperation) oraz zapisać je w lokalnej bazie danych (H2DB)
@@ -14,6 +14,6 @@ TST
 PAX [MALES]/[FEMALES]/[INFANTS]
 ```
 
-# Wskazówki:
+## Wskazówki:
 - W celu określenia kierunku operacji lotniczej zwracamy uwagę na pola: [ORIGIN_AIRPORT] oraz [DESTINATION_AIRPORT]. Jeżeli [ORIGIN_AIRPORT] ma wartość 'WAW' jest to operacja odlotu (DEPARTURE), w sytuacji gdy 'WAW' pojawia się w polu [DESTINATION_AIRPORT] jest to operacja przylotu (ARRIVAL).
 - Kod IATA przewoźnika możemy określić na podstawie dwóch pierwszych znaków pola [FLIGHT_NUMBER]  
